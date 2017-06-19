@@ -1,0 +1,35 @@
+﻿
+
+@model NHibernateMVC.Models.ValidationUsers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="@Url.Content("~/Style/Logowanie.css")" rel="stylesheet" type="text/css" />
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Logowanie</title>
+</head>
+<body>
+ 
+
+
+    <div>
+        @using (Html.BeginForm("Logowanie", "Logowanie", FormMethod.Post))
+        {
+
+            @Html.EditorForModel()
+            <br />
+            <input type="submit" name="submit" value="Zaloguj" />
+            <br /><br />
+            @ViewBag.message
+
+        }
+    </div>
+</body>
+</html>
